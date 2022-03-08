@@ -1,0 +1,512 @@
+.header {
+    width: $section-width;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('../../img/bg-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    // background-color: $orange-color;
+    &-clip-path-1 {
+        clip-path: circle(50.9% at 28% 28%);
+        background-color: $orange-color;
+        width: 30%;
+        height: 40%;
+        overflow: hidden;
+    }
+    &-clip-path-2 {
+        clip-path: circle(50% at 82% 84%);
+        background-color: $orange-color;
+        width: 30%;
+        height: 40%;
+        overflow: hidden;
+        position: absolute;
+        left: 70%;
+        top: 60%;
+    }
+    .nav {
+        position: absolute;
+        width: 100%;
+        height: 10rem;
+        border-bottom: 1px solid white;
+        top: 0;
+        &-heading {
+            width: 10%;
+            font-size: 3.5rem;
+            margin-top: 2rem;
+            margin-left: 4rem;
+            font-weight: bold;
+            transition: all .4s;
+            &:hover {
+                letter-spacing: .8rem;
+                color: white;
+            }
+        }
+        &-list {
+            margin-left: 30%;
+            margin-top: -4rem;
+            & li {
+                list-style: none;
+                font-size: 2rem;
+                font-weight: lighter;
+                margin-right: 2rem;
+                padding: 1rem;
+                float: left;
+                border-right: 1px solid white;
+                transition: all .4s;
+                &:hover {
+                    color: $orange-color;
+                    border-right: 1px solid $orange-color;
+                    border-bottom: 1px solid $orange-color;
+                }
+            }
+            & a {
+                text-decoration: none;
+                color: white;
+                transition: all .4s;
+                letter-spacing: .2rem;
+                &:hover {
+                    letter-spacing: 0;
+                    color: $orange-color;
+                }
+            }
+        }
+    }
+    &-main {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        &-p1 {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            word-spacing: 3rem;
+        }
+        &-h {
+            color: $orange-color;
+            animation: header 2s ease-in-out;
+            left: 0;
+            position: relative;
+            font-size: 8rem;
+            margin-bottom: 3rem;
+            letter-spacing: 1rem;
+        }
+        &-p2 {
+            font-size: 4rem;
+        }
+    }
+}
+
+.about {
+    width: $section-width;
+    height: 140vh;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid black;
+    &-back {
+        width: 40%;
+        height: 100vh;
+        clip-path: circle(50% at 10% 50%);
+        background-color: $orange-color;
+    }
+    &-card {
+        position: relative;
+        top: -100%;
+    }
+    &-img {
+        width: 100%;
+        height: 79vh;
+        margin-top: 35rem;
+        border: 10px solid rgb(255, 251, 255);
+        box-shadow: 10px 20px 15px 3px rgb(152, 165, 164);
+        object-fit: contain;
+    }
+    &-right {
+        margin-top: 9rem;
+        &>* {
+            margin-bottom: 4rem;
+        }
+        &-h1 {
+            font-size: 5rem;
+            transition: all .4s;
+            margin-top: 25rem;
+            &:hover {
+                letter-spacing: .4rem;
+                color: rgb(250, 74, 74);
+            }
+        }
+        &-h2 {
+            font-size: 4rem;
+            letter-spacing: 0.5rem;
+            color: $orange-color;
+        }
+        &-p {
+            font-size: 2.2rem;
+            letter-spacing: 0.2rem;
+        }
+    }
+    &-inner-headings {
+        font-size: 2.3rem;
+        text-transform: capitalize;
+        border-right: 1px solid black;
+        display: inline;
+        padding-right: 1rem;
+        color: $orange-color;
+    }
+    &-inner-para {
+        float: right;
+        font-size: 1.8rem;
+        // margin-left: 3rem;
+        text-transform: capitalize;
+    }
+    &-btn {
+        font-size: 2rem;
+        padding: 2rem 3rem;
+        text-decoration: none;
+        color: black;
+        border: 1px solid $orange-color;
+        transition: all .3s;
+        perspective: 100rem;
+        &:hover {
+            background-color: $orange-color;
+            color: white;
+            box-shadow: 10px 25px 15px 3px rgb(152, 165, 164);
+            transform: skewX(180deg);
+        }
+    }
+}
+
+.service {
+    width: $section-width;
+    height: 185vh;
+    background-color: $pink-color;
+    position: relative;
+    border-bottom: 1px solid black;
+    &-main {
+        transform: translate(-50%, -50%);
+        top: 15%;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        &-h {
+            color: $orange-color;
+            font-size: 4rem;
+            text-transform: capitalize;
+            margin-bottom: 3rem;
+        }
+        &-p {
+            font-size: 2.5rem;
+        }
+    }
+    &-inner-h {
+        text-transform: capitalize;
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+    &-inner-p {
+        font-size: 2rem;
+    }
+    &-cards {
+        position: relative;
+        background-color: white;
+        box-shadow: 1px 10px 15px 2px rgb(76, 76, 90);
+        padding: 5rem;
+        transition: all .4s;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+    }
+    .card-1 {
+        top: -60rem;
+    }
+    .card-2 {
+        top: -60rem;
+    }
+    &-icons {
+        color: $orange-color;
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.portfolio {
+    width: $section-width;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700)), url('../../img/back.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid black;
+    &-main {
+        transform: translate(-50%, -50%);
+        top: 15%;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        &-h {
+            color: white;
+            font-size: 4rem;
+            text-transform: capitalize;
+            margin-bottom: 3rem;
+        }
+        &-p {
+            font-size: 2.5rem;
+            color: white;
+        }
+    }
+    &-list {
+        position: absolute;
+        left: 35%;
+        top: 25%;
+    }
+    &-list li {
+        text-transform: capitalize;
+        color: white;
+        list-style: none;
+        font-size: 3rem;
+        font-weight: lighter;
+        margin-right: 2rem;
+        padding: 1rem;
+        float: left;
+        transition: all .8s;
+        &:hover {
+            color: $orange-color;
+            // border-right: 1px solid $orange-color;
+            border-bottom: 1px solid $orange-color;
+        }
+    }
+    &-inner-h {
+        text-transform: capitalize;
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+    }
+    &-inner-p {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    &-cards {
+        position: relative;
+        background-color: white;
+        box-shadow: 1px 10px 15px 2px rgb(76, 76, 90);
+        padding: 2rem;
+        transition: all .4s;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+    }
+    &-card-2 {
+        margin-bottom: 5rem;
+    }
+    &-img {
+        width: 100%;
+        height: 40rem;
+    }
+}
+
+.article {
+    width: 100%;
+    height: 100vh;
+    background-color: $pink-color;
+    // position: relative;
+    &-card {
+        height: 35rem;
+        position: relative;
+        top: 18rem;
+        background-position: center;
+        background-size: contain;
+        transform: scale(1.05);
+        box-shadow: 5px 10px 15px 5px rgb(84, 85, 104);
+        opacity: 0.7;
+        transition: all .4s;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+            // z-index: 1000;
+        }
+        &-inner {
+            display: inline-block;
+            background-color: white;
+            padding: 1.3rem;
+            margin: 5rem 0 0 2rem;
+        }
+        &-h {
+            color: black;
+            font-size: 3rem;
+        }
+        &-p {
+            color: black;
+        }
+    }
+    &-card-1 {
+        background-image: url(../../img/blog-1.jpg);
+        &-1-h {}
+    }
+    &-card-2 {
+        background-image: url(../../img/blog-2.jpg);
+    }
+    &-card-3 {
+        background-image: url(../../img/blog-3.jpg);
+    }
+    &-main {
+        transform: translate(-50%, -50%);
+        top: 20%;
+        left: 50%;
+        position: relative;
+        text-align: center;
+        &-h {
+            color: $orange-color;
+            font-size: 4rem;
+            text-transform: capitalize;
+            margin-bottom: 3rem;
+            transition: all .4s;
+            &:hover {
+                letter-spacing: 1rem;
+            }
+        }
+        &-p {
+            font-size: 2.5rem;
+        }
+    }
+    &-lower-card-2 {
+        position: relative;
+        top: 0rem;
+        background-color: white;
+        padding: 2rem;
+        transition: all 2s;
+        box-shadow: 5px 15px 15px 5px rgb(84, 85, 104);
+        z-index: 1000;
+        perspective: 200rem;
+        &:hover {
+            background-color: grey;
+            transform: rotateY(360deg);
+        }
+    }
+    &-row-h {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: $orange-color;
+    }
+    &-row-p {
+        font-size: 1.5rem;
+    }
+    &-btn {
+        text-decoration: none;
+        color: $orange-color;
+        font-size: 2rem;
+    }
+}
+
+.footer {
+    width: $section-width;
+    height: 100vh;
+    &-back {
+        position: absolute;
+        width: 40%;
+        height: 100vh;
+        background-color: $orange-color;
+    }
+    .row {
+        position: relative;
+    }
+    &-card-1 {
+        background-color: white;
+        position: relative;
+        top: 5rem;
+        box-shadow: 5px 15px 15px 5px #7f7f88;
+        padding: 2rem 5rem;
+        &-h {
+            font-size: 4rem;
+            margin-bottom: 5rem;
+            color: $orange-color;
+        }
+    }
+    &-form {
+        box-shadow: 1px 3px 6px 3px #dedede;
+        padding: 2rem;
+        &>* {
+            text-transform: capitalize;
+            font-size: 1.7rem;
+            margin-bottom: 3rem;
+            padding: 1.3rem;
+            border: hidden;
+            border-bottom: 1px solid black;
+            transition: all .4s;
+            &::placeholder {
+                border: hidden;
+                font-weight: bold;
+                letter-spacing: .2rem;
+            }
+            &:focus {
+                outline: none;
+                border-bottom: 4px solid $orange-color;
+                &:invalid {
+                    border: hidden;
+                    border-bottom: 2px solid blue;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+                padding: 1.3rem;
+            }
+        }
+        &-1 {
+            width: 90%;
+            margin-right: 5rem;
+        }
+        &-2 {
+            width: 90%;
+        }
+        &-3 {
+            width: 90%;
+            display: block;
+        }
+        &-4 {
+            border: hidden;
+            border-bottom: 1px solid black;
+        }
+    }
+    &-card-2 {
+        position: relative;
+        top: 15rem;
+        box-shadow: 4px 10px 15px 5px rgb(196, 196, 196);
+        padding: 4rem;
+        // margin-right: 2rem;
+        &>* {
+            margin-bottom: 3rem;
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+        &-h {
+            font-size: 3rem;
+        }
+        &-p {
+            font-size: 2rem;
+        }
+        &-row {
+            &-h {
+                margin-bottom: 1rem;
+                font-size: 1.7rem;
+                margin-left: 5rem;
+            }
+            &-p {
+                font-size: 1.7rem;
+                margin-left: 5rem;
+            }
+        }
+    }
+    &-icon {
+        position: absolute;
+        border-radius: 30%;
+        color: pink;
+        font-size: 3rem;
+    }
+}
